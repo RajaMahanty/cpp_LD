@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Biuld With G++",
+			"command": "C:/mingw64/bin/g++.exe",
+			"args": [
+				"-g",
+				"-std=c++23",
+				"-fdiagnostics-color=always",
+				"${workspaceFolder}\\*.cpp",
+				"-o",
+				"${fileDirname}\\rooster.exe"
+			],
+			"options": {
+				"cwd": "C:/mingw64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:/mingw64/bin/g++.exe"
+		}
+	]
+}
