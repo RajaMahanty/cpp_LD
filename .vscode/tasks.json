@@ -3,23 +3,26 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "Biuld With G++",
+			"label": "Build with G++",
 			"command": "C:/mingw64/bin/g++.exe",
 			"args": [
 				"-g",
 				"-std=c++23",
 				"-fdiagnostics-color=always",
-				"${workspaceFolder}\\*.cpp",
+				"${file}",
 				"-o",
-				"${fileDirname}\\rooster.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
-				"cwd": "C:/mingw64/bin"
+				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 			"detail": "compiler: C:/mingw64/bin/g++.exe"
 		}
 	]
